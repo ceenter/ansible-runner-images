@@ -12,6 +12,6 @@ Login to Quay.io:
 
 Build and push container image:
 ``` shell
-podman build -t quay.io/ceenter/ansible-runner-google:1.4.6 ./ansible-runner-google/
+podman build --layers=false --no-cache -t quay.io/ceenter/ansible-runner-google:1.4.6 ./ansible-runner-google/
 podman push quay.io/ceenter/ansible-runner-google:1.4.6
 ```
